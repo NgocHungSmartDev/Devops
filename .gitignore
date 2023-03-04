@@ -1,3 +1,5 @@
 /devops-springboot/mvnw.cmd
 /devops-springboot/.mvn
 /devops-springboot/mvnw
+/devops-springboot/target
+/devops-springboot/.idea
