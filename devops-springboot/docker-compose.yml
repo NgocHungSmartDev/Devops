@@ -1,0 +1,23 @@
+#version: '3.8'
+#
+#networks:
+#  devops_network:
+#    driver: bridge
+#
+#services:
+#  db:
+#    image: devops-mysql
+#    volumes:
+#      - ./data:/var/lib/mysql
+#    ports:
+#      - "3306:3306"
+#    networks:
+#      - devops_network
+#  app:
+#    image: devops-spring-boot
+#    ports:
+#      - "8080:8080"
+#    depends_on:
+#      - db
+#    networks:
+#      - devops_network
