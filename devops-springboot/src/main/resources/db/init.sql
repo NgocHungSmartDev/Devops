@@ -1,5 +1,5 @@
 create schema devops collate utf8mb4_0900_ai_ci;
-
+USE devops;
 CREATE TABLE `contact` (
                            `name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
                            `age` int(3) NOT NULL,
