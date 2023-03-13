@@ -1,0 +1,2 @@
+image: nginxdemos/hello:latest
+port: 80
