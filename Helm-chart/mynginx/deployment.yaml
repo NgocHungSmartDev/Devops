@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{.Release.Name}}
+  labels: {{ include "common.labels" . |nindent 6}}
+spec:
+  selector:
+    matchLabels: {{ include "common.labels" . |nindent 8}}
+  replicas: 2 # tells deployment to run 2 pods matching the template
+  template:
+    metadata:
+      labels: {{ include "common.labels" . |nindent 10}}
+    spec:
+      containers:
+      - name: {{.Release.Name}}
+        image: {{.values.image}}
+        ports:
+        - containerPort: {{.values.port}}
